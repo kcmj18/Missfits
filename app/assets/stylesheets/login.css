@@ -1,3 +1,25 @@
-#login{
+#login-page{
     background: #ffffff url("login-background.jpg") no-repeat fixed center;
+}
+#login{
+    background-color:rgba(0,0,0,0.29);
+    overflow:auto;
+}
+
+#user_email,#user_password{
+    width:100%;
+    border:none;
+    border-radius:25px;
+    background-color:#b2c4de;
+    opacity: 0.82;
+    height:30px;
+}
+#login .field a{
+    color:#fff;
+}
+.actions input,.actions button{
+    border-radius: 25px;
+    border: none;
+    width: 100%;
+    background-color: #b2c4de;
 }
