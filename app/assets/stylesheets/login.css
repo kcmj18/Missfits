@@ -1,0 +1,76 @@
+/* Background Image of entire page */
+#login-page{
+    background: #ffffff url("background-beach.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#login-page .container{
+    margin-top:12.5%;
+}
+/* Background Image of Login form area */
+#login{
+    background-color:rgba(0,0,0,0.29);
+    overflow:auto;
+    padding:20px;
+}
+/* Logo/Company name row */
+.company-name{
+    color:#fff;
+}
+#login>.row{
+    margin-bottom:35px;
+
+}
+/* login form field */
+#user_email,#user_password{
+    width:100%;
+    border:none;
+    border-radius:25px;
+    background-color:#b2c4de;
+    opacity: 0.82;
+    height:30px;
+    padding-left:20px;
+}
+::-webkit-input-placeholder {
+    color: #312e2e;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: #312e2e;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color: #312e2e;
+}
+
+:-ms-input-placeholder {
+    color: #312e2e;
+}
+#login .field a{
+    color:#fff;
+}
+.actions{
+    padding:0;
+    margin-top:20px;
+}
+.actions input,.actions button{
+    border-radius: 25px;
+    border: none;
+    width: 100%;
+    background-color: #b2c4de;
+}
+.twitter{
+    margin-left:25px;
+}
+#copyright{
+    display:inline-block
+}
+.login-footer{
+    padding:0;
+    color:#fff;
+}
+a.login-footer:hover{
+    color:#fff;
+}
