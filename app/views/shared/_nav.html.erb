@@ -1,23 +1,24 @@
-<nav>
-  <ul class="sf-menu">
-    <li><%= link_to "Home", root_path %></li>
-    <li> <%= link_to "Classes", page_classes_path %></li>
-    <li> <%= link_to "People", page_people_path %></li>
-    <li><%= link_to "Inbox", page_inbox_path %></li>
-    <li><%= link_to "Account", new_user_session_path %></li>
-    <li><%= link_to "Contact Us", page_contact_us_path %></li>
-    <!--<ul>-->
-    <!--<li>-->
-    <!--<% if user_signed_in? %>-->
-        <!--<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>-->
-        <!--<% else %>-->
-        <!--<%= link_to('Login', new_user_session_path) %>-->
-        <!--<% end %>-->
-    <!--</li>-->
-    <!--<% if user_signed_in? %>-->
-        <!--<li><%= link_to "Preferences", edit_user_registration_path %></li>-->
-        <!--<li><%= link_to "Puzzle", new_puzzle_path %></li>-->
-        <!--<% end %>-->
-    <!--</ul>-->
-  </ul>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+
+    <ul class="sf-menu">
+      <li> <a href="/"><img src="/assets/account-icon-4c1b5eccd36e79514a2b3dab3db24e8a812ad378b18fb85d7f24267449ec072b.png" alt="Account icon" width="25" height="25" /> <br/> Account</a> </li>
+      <li> <a href="/"><img src="/assets/dashboard-icon-b60a566db295f73033d025e1c90805a1735fdc639d866e6e3ec7320575d63d6e.png" alt="Dashboard icon" width="25" height="25" /> <br/> Dashboard</a> </li>
+      <li> <a href="/"><img src="/assets/map-icon-ec64093c3d24b57ab2dfc3f049adcaa11cd02f0e8b6c0e95464d86b55ad73754.png" alt="Map icon" width="25" height="25" /> <br/> Map</a> </li>
+
+      <!--<ul>-->
+      <!--<li>-->
+      <!--<% if user_signed_in? %>-->
+          <!--<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>-->
+          <!--<% else %>-->
+          <!--<%= link_to('Login', new_user_session_path) %>-->
+          <!--<% end %>-->
+      <!--</li>-->
+      <!--<% if user_signed_in? %>-->
+          <!--<li><%= link_to "Preferences", edit_user_registration_path %></li>-->
+          <!--<li><%= link_to "Puzzle", new_puzzle_path %></li>-->
+          <!--<% end %>-->
+      <!--</ul>-->
+    </ul>
+  </div>
 </nav>
