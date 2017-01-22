@@ -1,0 +1,54 @@
+body{
+    padding-top: 75px;
+}
+
+.container {
+    min-height: 30px;
+    padding: 0;
+    float: right;
+}
+
+.sf-menu li {
+    list-style-type: none;
+    float: right;
+    text-align: center;
+    width: 100px;
+}
+
+.sf-menu li:hover {
+    background-color: #ddd;
+}
+
+.sf-menu a {
+    text-decoration: none;
+    color: darkblue;
+    display: block;
+    padding: 10px;
+}
+
+#classes_container{
+    width: 90%;
+    padding-left: 5%;
+}
+
+#classes_container h3{
+    color: darkblue;
+    padding: 5px;
+    border-bottom: 2px solid #000;
+}
+
+.classes{
+    border: 2px solid #000;
+    margin: 5px;
+    height: 200px;
+    float: left;
+}
+
+.class_name{
+    padding: 5px;
+    border-bottom: 2px solid #000;
+}
+
+.recent_questions{
+    padding: 5px;
+}
