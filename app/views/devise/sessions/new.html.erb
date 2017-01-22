@@ -14,7 +14,7 @@
           <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
               <div class="field">
                 <%#= f.label :email %><br/>
-                <%= f.email_field :email, autofocus: true, placeholder: 'Email Address' %>
+                <%= f.email_field :email, placeholder: 'Email/Username' %>
                 <%= link_to 'Forgot Username?' %>
               </div>
 
@@ -41,8 +41,8 @@
       </div>
       <div class="row">
         <div id="social-media">
-          <%= image_tag "FB-f-Logo__blue_29.png", alt: "Facebook Logo", :class => "col-xs-offset-5"  %>
-          <%= image_tag "Twitter_Logo_White_On_Blue.png", alt: "Twitter Logo", :class => "twitter" %>
+          <%= link_to (image_tag "FB-f-Logo__blue_29.png", alt: "Facebook Logo", :class => "col-xs-offset-5"), "https://www.facebook.com/"  %>
+          <%= link_to (image_tag "Twitter_Logo_White_On_Blue.png", alt: "Twitter Logo", :class => "twitter"), "https://twitter.com/" %>
         </div>
       </div>
       <div class="row">

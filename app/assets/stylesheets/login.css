@@ -31,6 +31,22 @@
     background-color:#b2c4de;
     opacity: 0.82;
     height:30px;
+    padding-left:20px;
+}
+::-webkit-input-placeholder {
+    color: #312e2e;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: #312e2e;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color: #312e2e;
+}
+
+:-ms-input-placeholder {
+    color: #312e2e;
 }
 #login .field a{
     color:#fff;
@@ -53,5 +69,8 @@
 }
 .login-footer{
     padding:0;
+    color:#fff;
+}
+a.login-footer:hover{
     color:#fff;
 }
