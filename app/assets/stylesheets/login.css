@@ -24,7 +24,7 @@
 
 }
 /* login form field */
-#user_email,#user_password{
+#user_email,#user_password, #user_password_confirmation{
     width:100%;
     border:none;
     border-radius:25px;
@@ -62,6 +62,15 @@
     width: 100%;
     background-color: #b2c4de;
 }
+.actions button a{
+    color:#000;
+}
+.actions button a:hover{
+    text-decoration: none;
+}
+.actions input:hover, .actions button:hover{
+    background-color:#ffebc7;
+}
 .twitter{
     margin-left:25px;
 }
@@ -72,6 +81,8 @@
     padding:0;
     color:#fff;
 }
+.render_links a{color:#fff;}
+.render_links a:hover{color:#fff;}
 a.login-footer:hover{
     color:#fff;
 }
