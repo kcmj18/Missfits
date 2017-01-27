@@ -56,3 +56,10 @@ body{
 .recent_questions{
     padding: 5px;
 }
+.account-icon, .dashboard-icon, .map-icon{
+    width:25px;
+    height:25px;
+}
+.navbar-brand>img{
+    width:50px;
+}
