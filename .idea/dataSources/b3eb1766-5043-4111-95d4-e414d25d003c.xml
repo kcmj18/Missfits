@@ -138,15 +138,23 @@
       <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="37" parent="7" name="index_users_on_email">
+    <column id="37" parent="7" name="first_name">
+      <Position>13</Position>
+      <DataType>varchar|0</DataType>
+    </column>
+    <column id="38" parent="7" name="last_name">
+      <Position>14</Position>
+      <DataType>varchar|0</DataType>
+    </column>
+    <index id="39" parent="7" name="index_users_on_email">
       <ColNames>email</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="38" parent="7" name="index_users_on_reset_password_token">
+    <index id="40" parent="7" name="index_users_on_reset_password_token">
       <ColNames>reset_password_token</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="39" parent="7">
+    <key id="41" parent="7">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>

@@ -24,14 +24,17 @@
 
 }
 /* login form field */
-#user_email,#user_password, #user_password_confirmation{
+#user_email,#user_password, #user_password_confirmation, #user_first_name, #user_last_name{
     width:100%;
     border:none;
-    border-radius:25px;
+    border-radius:11px;
     background-color:#b2c4de;
     opacity: 0.82;
     height:30px;
     padding-left:20px;
+}
+.field{
+    height:50px;
 }
 ::-webkit-input-placeholder {
     color: #312e2e;

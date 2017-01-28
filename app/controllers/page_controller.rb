@@ -1,4 +1,5 @@
 class PageController < ApplicationController
+
   layout('application', except: :account)
   def home
   end
@@ -13,7 +14,7 @@ class PageController < ApplicationController
   end
 
   def account
-# render layout:false
+
   end
 
   def contact_us
