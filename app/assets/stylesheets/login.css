@@ -24,14 +24,17 @@
 
 }
 /* login form field */
-#user_email,#user_password{
+#user_email,#user_password, #user_password_confirmation, #user_first_name, #user_last_name{
     width:100%;
     border:none;
-    border-radius:25px;
+    border-radius:11px;
     background-color:#b2c4de;
     opacity: 0.82;
     height:30px;
     padding-left:20px;
+}
+.field{
+    height:50px;
 }
 ::-webkit-input-placeholder {
     color: #312e2e;
@@ -50,6 +53,7 @@
 }
 #login .field a{
     color:#fff;
+    
 }
 .actions{
     padding:0;
@@ -61,6 +65,15 @@
     width: 100%;
     background-color: #b2c4de;
 }
+.actions button a{
+    color:#000;
+}
+.actions button a:hover{
+    text-decoration: none;
+}
+.actions input:hover, .actions button:hover{
+    background-color:#ffebc7;
+}
 .twitter{
     margin-left:25px;
 }
@@ -71,6 +84,8 @@
     padding:0;
     color:#fff;
 }
+.render_links a{color:#fff;}
+.render_links a:hover{color:#fff;}
 a.login-footer:hover{
     color:#fff;
 }
