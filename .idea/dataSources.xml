@@ -7,7 +7,7 @@
       <imported>true</imported>
       <remarks>SQLite</remarks>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\kcmj1\RubymineProjects\Missfits\db\development.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\kcmj1\RubymineProjects\testing\Missfits\db\development.sqlite3</jdbc-url>
       <libraries>
         <library>
           <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/xerial-sqlite-license.txt</url>
@@ -27,6 +27,13 @@
       <driver-properties>
         <property name="enable_load_extension" value="true" />
       </driver-properties>
+    </data-source>
+    <data-source source="LOCAL" name="HSQLDB (Local) - jdbc:hsqldb:file:C:\Users\kcmj1\RubymineProjects\testing\Missfits\db" read-only="true" uuid="a28e5476-b60e-471d-a5e1-65ea31f69ee1">
+      <driver-ref>hsqldb.local</driver-ref>
+      <synchronize>true</synchronize>
+      <configured-by-url>true</configured-by-url>
+      <jdbc-driver>org.hsqldb.jdbc.JDBCDriver</jdbc-driver>
+      <jdbc-url>jdbc:hsqldb:file:C:\Users\kcmj1\RubymineProjects\testing\Missfits\db/</jdbc-url>
     </data-source>
   </component>
 </project>
