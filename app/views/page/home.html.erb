@@ -1,6 +1,10 @@
 <div id="classes_container" class="container-fluid">
   <h3>My Classes</h3>
   <div class="row">
+
+    <% @courses.schedules.each do |schedule| %>
+
+
     <div class="classes col-xs-12 col-sm-3">
       <div class="class_name">
         Class Name
