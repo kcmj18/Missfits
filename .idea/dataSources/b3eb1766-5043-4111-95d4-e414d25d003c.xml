@@ -181,15 +181,20 @@
       <Position>14</Position>
       <DataType>VARCHAR(0,-1)|12</DataType>
     </column>
-    <index id="48" parent="8" name="index_users_on_email">
+    <column id="48" parent="8" name="admin">
+      <Position>15</Position>
+      <DataType>BOOLEAN(0,-1)|4</DataType>
+      <DefaultExpression>&apos;f&apos;</DefaultExpression>
+    </column>
+    <index id="49" parent="8" name="index_users_on_email">
       <ColNames>email</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="49" parent="8" name="index_users_on_reset_password_token">
+    <index id="50" parent="8" name="index_users_on_reset_password_token">
       <ColNames>reset_password_token</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="50" parent="8">
+    <key id="51" parent="8">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
