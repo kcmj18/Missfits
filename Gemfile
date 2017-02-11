@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 #commented change here for pushing file
 gem 'devise'
 
