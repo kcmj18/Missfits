@@ -1,11 +1,12 @@
 class PageController < ApplicationController
-  #before_filter :authenticate_user!
+  before_filter :authenticate_user!
 
   layout('application', except: :account)
   def home
   end
 
   def classes
+
   end
 
   def people
