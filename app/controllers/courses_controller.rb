@@ -1,4 +1,3 @@
-
 class CoursesController < ApplicationController
   before_action :set_course, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!

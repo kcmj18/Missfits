@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :admins
-  resources :courses
+
+  resources :courses do
+    resources :schedule
+  end
   get 'page/home'
 
   get 'page/classes'
@@ -13,9 +15,13 @@ Rails.application.routes.draw do
 
   get 'page/contact_us'
 
-
-
   devise_for :users
+  resources :users do
+    resources :schedule
+  end
+
+
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
  root 'page#home'
 end
