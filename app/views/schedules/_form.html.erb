@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :course_id %>
-    <%= f.select :course_id, Course.all.collect { |p| [ p.course_name ] } %>
+    <%= f.select :course_id, Course.all.collect { |p| [ p.course_name, p.id ] } %>
   </div>
 
   <div class="field">
