@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170211232356) do
+ActiveRecord::Schema.define(version: 20170213214030) do
 
   create_table "courses", force: :cascade do |t|
     t.integer  "course_id"
@@ -21,12 +21,12 @@ ActiveRecord::Schema.define(version: 20170211232356) do
   end
 
   create_table "schedules", force: :cascade do |t|
-    t.integer  "users_id"
-    t.integer  "courses_id"
+    t.integer  "course_id"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["courses_id"], name: "index_schedules_on_courses_id"
-    t.index ["users_id"], name: "index_schedules_on_users_id"
+    t.index ["course_id"], name: "index_schedules_on_course_id"
+    t.index ["user_id"], name: "index_schedules_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -45,6 +45,9 @@ ActiveRecord::Schema.define(version: 20170211232356) do
     t.string   "first_name"
     t.string   "last_name"
     t.boolean  "admin",                  default: false
+    t.integer  "class_1"
+    t.integer  "first"
+    t.integer  "second"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
