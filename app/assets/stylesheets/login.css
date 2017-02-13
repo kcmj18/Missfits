@@ -34,7 +34,7 @@
     padding-left:20px;
 }
 .field{
-    height:50px;
+    height: auto;
 }
 ::-webkit-input-placeholder {
     color: #312e2e;
