@@ -29,6 +29,18 @@
           </tr>
       <% end %>
       </tbody>
+      <tfoot>
+      <tr>
+        <td>
+          <div id="paging">
+            <ul>
+              <li><%= link_to_previous_page @courses, 'Previous' %></li>
+              <li><%= link_to_next_page @courses, 'Next' %></li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+      </tfoot>
     </table>
   </div>
 </div>

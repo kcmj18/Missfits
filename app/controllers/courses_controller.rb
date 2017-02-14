@@ -5,6 +5,9 @@ class CoursesController < ApplicationController
   # GET /courses.json
   def index
     @courses = Course.all
+    @page = params['page'].to_i
+    @per_page = 25
+    @courses = Course.page(@page).per(@per_page)
   end
 
   # GET /courses/1
