@@ -2,6 +2,6 @@
 <dataSource name="development">
   <database-model serializer="dbm" rdbms="SQLITE" format-version="4.0">
     <root id="1"/>
-    <schema id="2" parent="1" name="main"/>
+    <schema id="2" parent="1"/>
   </database-model>
 </dataSource>
