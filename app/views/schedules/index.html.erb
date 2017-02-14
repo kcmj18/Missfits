@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Schedules</h1>
+<div class="panel panel-default">
+  <div class="panel-heading">Schedule</div>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Course</th>
@@ -16,14 +17,13 @@
       <tr>
         <td><%= schedule.course.course_name %></td>
         <td><%= schedule.user.first_name %></td>
-        <td><%= link_to 'Show', schedule %></td>
-        <td><%= link_to 'Edit', edit_schedule_path(schedule) %></td>
-        <td><%= link_to 'Destroy', schedule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Details', schedule %></td>
+        <td class="danger"><%= link_to 'Drop Class', schedule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
 
-<%= link_to 'New Schedule', new_schedule_path %>
+<%= link_to 'Add New Class', new_schedule_path %>
