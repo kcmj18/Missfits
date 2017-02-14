@@ -1,4 +1,13 @@
-.glyph{
-    width: 25px;
-    height: 25px;
+.paging ul{
+    margin:0;
+}
+.paging ul li{
+    list-style: none;
+    padding:10px;
+}
+.paging ul li:first-of-type{
+    float:left;
+}
+.paging ul li:last-of-type{
+    float:left;
 }
