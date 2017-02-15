@@ -3,6 +3,8 @@ class PageController < ApplicationController
 
   layout('application', except: :account)
   def home
+
+
   end
 
   def classes

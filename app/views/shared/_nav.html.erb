@@ -26,7 +26,7 @@
 
         </ul>
       </li>
-      <li><%= link_to (image_tag "dashboard-icon.png", alt: "Dashboard icon", class: "dashboard-icon") + "Dashboard", edit_user_registration_path %></li>
+      <li><%= link_to (image_tag "dashboard-icon.png", alt: "Dashboard icon", class: "dashboard-icon") + "Dashboard", root_path %></li>
       <li><%= link_to edit_user_registration_path do %>
             <%= (image_tag "map-icon.png", alt: "Map icon", class: "map-icon") %>
             <br/><span>Map</span>
@@ -36,6 +36,9 @@
         <%= link_to (image_tag "courses.png", alt: "Courses icon", class: "dashboard-icon") + "Courses", courses_path %>
       </li>
 
+      <li>
+        <%= link_to (image_tag "calendar.png", alt: "Schedule icon", class: "dashboard-icon") + "Schedule", schedules_path %>
+      </li>
     </ul>
   </div>
 </nav>

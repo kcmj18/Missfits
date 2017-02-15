@@ -6,6 +6,16 @@
     <table class="table">
       <thead>
       <tr>
+        <td>
+          <div class="paging">
+            <ul>
+              <li><%= link_to_previous_page @courses, 'Previous' %></li>
+              <li><%= link_to_next_page @courses, 'Next' %></li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+      <tr>
         <th>Course Number</th>
         <th>Course Abbreviation</th>
         <th>Course name</th>
@@ -29,6 +39,18 @@
           </tr>
       <% end %>
       </tbody>
+      <tfoot>
+      <tr>
+        <td>
+          <div class="paging">
+            <ul>
+              <li><%= link_to_previous_page @courses, 'Previous' %></li>
+              <li><%= link_to_next_page @courses, 'Next' %></li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+      </tfoot>
     </table>
   </div>
 </div>
