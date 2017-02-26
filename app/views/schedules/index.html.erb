@@ -13,7 +13,7 @@
   </thead>
 
   <tbody>
-    <% @schedules.each do |schedule| %>
+    <% current_user.schedules.each do |schedule| %>
       <tr>
         <td><%= schedule.course.course_name %></td>
         <td><%= schedule.user.first_name %></td>

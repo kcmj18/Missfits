@@ -1,18 +1,48 @@
 <div id="classes_container" class="container-fluid">
   <h3>My Classes</h3>
   <div class="row">
-    <% current_user.schedules.each do |schedule| %>
-        <div class="classes col-xs-12 col-sm-3">
-          <div class="class_name">
-            <%= schedule.course.course_name %>
-          </div>
-          <div class="recent_questions">
-            <b> Most recent question:</b>
-            <p>"when is the homework assignment due by?"</p>
-            by <b><%= schedule.user.first_name %></b> <Br/>
-            posted <b>two hours ago</b>
-          </div>
-        </div>
+    <% if (current_user.try(:admin?)) %>
+
+        <% current_user.schedules.each do |schedule| %>
+            <% @schedules.each do |schedules| %>
+                <div class="classes col-xs-12 col-sm-3">
+                  <div class="class_name">
+                    <%= schedule.course.course_name %>
+                  </div>
+                  <div class="recent_questions">
+                    <b> Pending Requests:</b>
+                    <% if schedules.accepted == false %>
+                        <%= schedules.user.first_name %>
+                    <% end %>
+                  </div>
+                </div>
+            <% end %>
+        <% end %>
+    <% else %>
+        <% current_user.schedules.each do |schedule| %>
+            <% if schedule.accepted %>
+                <div class="classes col-xs-12 col-sm-3">
+                  <div class="class_name">
+                    <%= schedule.course.course_name %>
+                  </div>
+                  <div class="recent_questions">
+                    <b> Most recent question:</b>
+                    <p>"when is the homework assignment due by?"</p>
+                    by <b><%= schedule.user.first_name %></b> <Br/>
+                    posted <b>two hours ago</b>
+                  </div>
+                </div>
+            <% else %>
+                <div class="classes col-xs-12 col-sm-3">
+                  <div class="class_name">
+                    <%= schedule.course.course_name %>
+                  </div>
+                  <div class="recent_questions">
+                    <b> Pending Approval</b>
+                  </div>
+                </div>
+            <% end %>
+        <% end %>
     <% end %>
   </div>
 </div>

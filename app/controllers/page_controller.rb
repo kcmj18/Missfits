@@ -3,7 +3,7 @@ class PageController < ApplicationController
 
   layout('application', except: :account)
   def home
-
+@schedules = Schedule.all
 
   end
 
