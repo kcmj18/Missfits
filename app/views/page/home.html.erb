@@ -3,7 +3,7 @@
   <div class="row">
     <% if (current_user.try(:admin?)) %>
         <% current_user.schedules.each do |schedule| %>
-            <div class="classes col-xs-12 col-sm-3">
+            <div class="classes shadow col-xs-12 col-sm-3">
               <div class="class_name">
                 <%= schedule.course.course_name %>
               </div>
