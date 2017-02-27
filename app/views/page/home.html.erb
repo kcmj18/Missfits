@@ -2,21 +2,22 @@
   <h3>My Classes</h3>
   <div class="row">
     <% if (current_user.try(:admin?)) %>
-
         <% current_user.schedules.each do |schedule| %>
-            <% @schedules.each do |schedules| %>
-                <div class="classes col-xs-12 col-sm-3">
-                  <div class="class_name">
-                    <%= schedule.course.course_name %>
-                  </div>
-                  <div class="recent_questions">
-                    <b> Pending Requests:</b>
-                    <% if schedules.accepted == false %>
-                        <%= schedules.user.first_name %>
+            <div class="classes col-xs-12 col-sm-3">
+              <div class="class_name">
+                <%= schedule.course.course_name %>
+              </div>
+              <div class="recent_questions">
+                <b> Pending Requests:</b>
+                <% @schedules.each do |schedules| %>
+                    <% if schedule.course_id == schedules.course_id && schedules.accepted == false %>
+                        <% if schedules.accepted == false %>
+                            <p><%= schedules.user.first_name %></p>
+                        <% end %>
                     <% end %>
-                  </div>
-                </div>
-            <% end %>
+                <% end %>
+              </div>
+            </div>
         <% end %>
     <% else %>
         <% current_user.schedules.each do |schedule| %>
