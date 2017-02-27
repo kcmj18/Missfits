@@ -63,3 +63,15 @@ body{
 .navbar-brand>img{
     width:50px;
 }
+
+
+/*Fixes account dropdown menu*/
+.dropdown-menu li a{
+    text-align: left;
+    padding: 8px 5px;
+
+}
+.dropdown-menu{
+    padding: 0;
+    min-width: 0;
+}

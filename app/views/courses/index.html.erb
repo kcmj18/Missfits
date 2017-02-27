@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Courses</div>
+  <div class="panel-body">
+    <table class="table">
+      <thead>
+      <tr>
+        <td>
+          <div class="paging">
+            <ul>
+              <li><%= link_to_previous_page @courses, 'Previous' %></li>
+              <li><%= link_to_next_page @courses, 'Next' %></li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th>Course Number</th>
+        <th>Course Abbreviation</th>
+        <th>Course name</th>
+        <th colspan="3"></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @courses.each do |course| %>
+          <tr>
+            <td><%= course.course_id %></td>
+            <td><%= course.course_abbrev %></td>
+            <td><%= course.course_name %></td>
+            <% if( current_user && current_user.admin ) %>
+                <td><%= link_to 'Show', course %></td>
+                <td><%= link_to 'Edit', edit_course_path(course) %></td>
+                <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% else %>
+                <td><%= link_to 'Show', course %></td>
+            <% end %>
+          </tr>
+      <% end %>
+      </tbody>
+      <tfoot>
+      <tr>
+        <td>
+          <div class="paging text-center">
+            <ul>
+              <li><%= link_to_previous_page @courses, 'Previous' %></li>
+              <li><%= link_to_next_page @courses, 'Next' %></li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+</div>
+<br>
+
+<%= link_to 'New Course', new_course_path %>

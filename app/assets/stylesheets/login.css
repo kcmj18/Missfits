@@ -24,17 +24,26 @@
 
 }
 /* login form field */
-#user_email,#user_password, #user_password_confirmation, #user_first_name, #user_last_name{
-    width:100%;
+#user_email,#user_password, #user_password_confirmation, #user_first_name, #user_last_name, #user_current_password{
+    width:25%;
+    min-width: 200px;
+    max-width: 300px;
     border:none;
-    border-radius:11px;
-    background-color:#b2c4de;
+    border-radius: 2px;
+    color: #000;
+    background-color: #ddd;
     opacity: 0.82;
     height:30px;
     padding-left:20px;
 }
+#BackToDash a{
+    color: orange;
+    background-color: #fff;
+
+}
+
 .field{
-    height:50px;
+    /*height: auto;*/
 }
 ::-webkit-input-placeholder {
     color: #312e2e;
@@ -55,15 +64,21 @@
     color:#fff;
     
 }
+
 .actions{
-    padding:0;
-    margin-top:20px;
+    margin-top: 30px;
 }
+
 .actions input,.actions button{
-    border-radius: 25px;
-    border: none;
-    width: 100%;
-    background-color: #b2c4de;
+    width:25%;
+    min-width: 100px;
+    max-width: 150px;
+    border:none;
+    border-radius: 10px;
+    color: #000;
+    background-color: #9d9d9d;
+    opacity: 0.82;
+    height:30px;
 }
 .actions button a{
     color:#000;
@@ -72,7 +87,7 @@
     text-decoration: none;
 }
 .actions input:hover, .actions button:hover{
-    background-color:#ffebc7;
+    background-color: #ddd;
 }
 .twitter{
     margin-left:25px;

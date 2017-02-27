@@ -1,54 +1,64 @@
 <div id="classes_container" class="container-fluid">
   <h3>My Classes</h3>
   <div class="row">
-    <div class="classes col-xs-12 col-sm-3">
-      <div class="class_name">
-        Class Name
-      </div>
-      <div class="recent_questions">
-        <b> Most recent question:</b>
-        <p>"when is the homework assignment due by?"</p>
-        by <b>Name Here</b> <Br/>
-        posted <b>two hours ago</b>
-      </div>
-    </div>
+    <% if (current_user.try(:admin?)) %>
+        <% current_user.schedules.each do |schedule| %>
+            <div class="classes col-xs-12 col-sm-3">
+              <div class="class_name">
+                <%= schedule.course.course_name %>
+              </div>
+              <div class="recent_questions">
+                <b> Pending Requests:</b>
+                <% @schedules.each do |schedules| %>
+                    <% if schedule.course_id == schedules.course_id && schedules.accepted == false %>
+                        <% if schedules.accepted == false %>
+                            <p>
+                              <%= schedules.user.first_name + " " + schedules.user.last_name  %>
+                              <%#= link_to "Accept" %>
+                              <%#= link_to "Decline" %>
 
-    <div class="classes col-xs-12 col-sm-3">
-      <div class="class_name">
-          Class Name
-      </div>
-      <div class="recent_questions">
-        <b> Most recent question:</b>
-        <p>"when is the homework assignment due by?"</p>
-        by <b>Name Here</b> <Br/>
-        posted <b>just now</b>
-      </div>
-    </div>
+                              <%= form_for schedules do |f| %>
+                                  <%= f.hidden_field :accept, value: false %>
+                                  <%= f.submit 'Decline' %>
+                              <% end %>
 
-    <div class="classes col-xs-12 col-sm-3">
-      <div class="class_name">
-        Class Name
-      </div>
-      <div class="recent_questions">
-        <b> Most recent question:</b>
-        <p>"when is the homework assignment due by?"</p>
-        by <b>Name Here</b> <Br/>
-        posted <b>12 minutes ago</b>
-      </div>
-    </div>
+                              <%= form_for schedule do |f| %>
+                                  <%= f.hidden_field :accept, value: true %>
+                                  <%= f.submit 'Accept' %>
+                              <% end %>
 
-    <div class="classes col-xs-12 col-sm-3">
-      <div class="class_name">
-        Class Name
-      </div>
-      <div class="recent_questions">
-        <b> Most recent question:</b>
-        <p>"when is the homework assignment due by?"</p>
-        by <b>Name Here</b> <Br/>
-        posted <b>two days ago</b>
-      </div>
-    </div>
+                            </p>
+                        <% end %>
+                    <% end %>
+                <% end %>
+              </div>
+            </div>
+        <% end %>
+    <% else %>
+        <% current_user.schedules.each do |schedule| %>
+            <% if schedule.accepted %>
+                <div class="classes col-xs-12 col-sm-3">
+                  <div class="class_name">
+                    <%= schedule.course.course_name %>
+                  </div>
+                  <div class="recent_questions">
+                    <b> Most recent question:</b>
+                    <p>"when is the homework assignment due by?"</p>
+                    by <b><%= schedule.user.fist_name + " " + schedule.user.last_name %></b> <Br/>
+                    posted <b>two hours ago</b>
+                  </div>
+                </div>
+            <% else %>
+                <div class="classes col-xs-12 col-sm-3">
+                  <div class="class_name">
+                    <%= schedule.course.course_name %>
+                  </div>
+                  <div class="recent_questions">
+                    <b> Pending Approval</b>
+                  </div>
+                </div>
+            <% end %>
+        <% end %>
+    <% end %>
   </div>
 </div>
-
-
