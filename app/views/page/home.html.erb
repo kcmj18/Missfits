@@ -23,12 +23,12 @@
                               <!--end-->
 
                               <%= form_for schedules do |f| %>
-                                  <%= f.hidden_field :accept, value: false %>
+                                  <%= f.hidden_field :accepted, value: false %>
                                   <%= f.submit 'Decline' %>
                               <% end %>
 
                               <%= form_for schedule do |f| %>
-                                  <%= f.hidden_field :accept, value: true %>
+                                  <%= f.hidden_field :accepted, value: true %>
                                   <%= f.submit 'Accept' %>
                               <% end %>
                             <%#= form_for schedules do |f| %>
