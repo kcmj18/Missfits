@@ -11,3 +11,11 @@
 .paging ul li:last-of-type{
     float:left;
 }
+.classes {
+    min-height: 100px;
+    box-shadow: 5px 5px 5px #8c8c8c;
+
+}
+.navbar {
+    box-shadow: 5px 5px 5px #8c8c8c;
+}
