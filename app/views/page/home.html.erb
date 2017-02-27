@@ -12,7 +12,22 @@
                 <% @schedules.each do |schedules| %>
                     <% if schedule.course_id == schedules.course_id && schedules.accepted == false %>
                         <% if schedules.accepted == false %>
-                            <p><%= schedules.user.first_name %></p>
+                            <p>
+                              <%= schedules.user.first_name + " " + schedules.user.last_name  %>
+                              <%#= link_to "Accept" %>
+                              <%#= link_to "Decline" %>
+
+                              <%= form_for schedules do |f| %>
+                                  <%= f.hidden_field :accept, value: false %>
+                                  <%= f.submit 'Decline' %>
+                              <% end %>
+
+                              <%= form_for schedule do |f| %>
+                                  <%= f.hidden_field :accept, value: true %>
+                                  <%= f.submit 'Accept' %>
+                              <% end %>
+
+                            </p>
                         <% end %>
                     <% end %>
                 <% end %>
@@ -29,7 +44,7 @@
                   <div class="recent_questions">
                     <b> Most recent question:</b>
                     <p>"when is the homework assignment due by?"</p>
-                    by <b><%= schedule.user.first_name %></b> <Br/>
+                    by <b><%= schedule.user.fist_name + " " + schedule.user.last_name %></b> <Br/>
                     posted <b>two hours ago</b>
                   </div>
                 </div>

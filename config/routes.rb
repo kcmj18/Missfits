@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
   get 'page/contact_us'
 
+
   devise_for :users
   resources :users do
     resources :schedule
