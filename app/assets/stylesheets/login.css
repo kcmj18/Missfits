@@ -43,7 +43,7 @@
 }
 
 .field{
-    height: auto;
+    /*height: auto;*/
 }
 ::-webkit-input-placeholder {
     color: #312e2e;
