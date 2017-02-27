@@ -16,6 +16,11 @@
                               <%= schedules.user.first_name + " " + schedules.user.last_name  %>
                               <%#= link_to "Accept" %>
                               <%#= link_to "Decline" %>
+                              <!--if params['button_action'] == true-->
+                              <!--@schedules.accepted = true-->
+                              <!--else-->
+                              <!--@schedules.accepted = false-->
+                              <!--end-->
 
                               <%= form_for schedules do |f| %>
                                   <%= f.hidden_field :accept, value: false %>
@@ -26,7 +31,10 @@
                                   <%= f.hidden_field :accept, value: true %>
                                   <%= f.submit 'Accept' %>
                               <% end %>
-
+                            <%#= form_for schedules do |f| %>
+                              <%#= f.button "Accept", name: "button_action", value: true %>
+                              <%#= f.button "Decline", name: "button_action", value: false %>
+                                  <%# end %>
                             </p>
                         <% end %>
                     <% end %>
@@ -44,7 +52,7 @@
                   <div class="recent_questions">
                     <b> Most recent question:</b>
                     <p>"when is the homework assignment due by?"</p>
-                    by <b><%= schedule.user.fist_name + " " + schedule.user.last_name %></b> <Br/>
+                    by <b><%= schedule.user.first_name + " " + schedule.user.last_name %></b> <Br/>
                     posted <b>two hours ago</b>
                   </div>
                 </div>
