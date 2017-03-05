@@ -46,7 +46,6 @@ ActiveRecord::Schema.define(version: 20170226034247) do
     t.string   "first_name"
     t.string   "last_name"
     t.boolean  "admin",                  default: false
-    t.integer  "class_1"
     t.integer  "first"
     t.integer  "second"
     t.index ["email"], name: "index_users_on_email", unique: true

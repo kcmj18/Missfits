@@ -16,9 +16,10 @@
     padding:20px;
 }
 /* Logo/Company name row */
-.company-name{
-    color:#fff;
+.logoContainer{
+    text-align: center;
 }
+
 #login>.row{
     margin-bottom:35px;
 
@@ -62,7 +63,6 @@
 }
 #login .field a{
     color:#fff;
-    
 }
 
 .actions{
