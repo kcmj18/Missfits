@@ -15,8 +15,7 @@
                     <% if schedule.course_id == schedules.course_id && schedules.accepted == false %>
                         <% if schedules.accepted == false %>
                             <p>
-                              <%= schedules.user.first_name + " " + schedules.user.last_name  %>
-
+                              <%= schedules.user.first_name  %>
 
                               <%= form_for schedules do |f| %>
                                   <%= f.hidden_field :accepted, value: false %>

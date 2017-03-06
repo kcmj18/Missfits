@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'note/create'
+
+  get 'note/destroy'
+
+  get 'review/create'
+
+  get 'review/destroy'
+
   resources :schedules
   resources :courses do
     resources :schedules
