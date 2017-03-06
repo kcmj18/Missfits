@@ -6,6 +6,8 @@
             <div class="classes shadow col-xs-12 col-sm-3">
               <div class="class_name">
                 <%= schedule.course.course_name %>
+
+                <%= schedule.course.all %>
               </div>
               <div class="recent_questions">
                 <b> Pending Requests:</b>
@@ -25,6 +27,8 @@
                                   <%= f.hidden_field :accepted, value: true %>
                                   <%= f.submit 'Accept' %>
                               <% end %>
+
+
 
                             </p>
                         <% end %>

@@ -2,7 +2,8 @@ Rails.application.routes.draw do
 
   resources :schedules
   resources :courses do
-    resources :schedule
+    resources :schedules
+    resources :notes
   end
   get 'page/home'
 
